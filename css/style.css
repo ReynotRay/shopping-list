@@ -5,27 +5,32 @@ body {
 }
 
 .container {
-    width: 650px;
+    width: 550px;
     margin: 150px auto;
+    text-align: center;
 }
 
-.slist-input {
+.list-input {
     height: 24px;
     width: 544px;
     text-align: center;
     font-size: 24px;
 }
-
+.list{
+    list-style-type: none;
+    padding: 0;
+}
 h1 {
     margin-top: -17px;
-    padding-top: 20px;
     font-size: 48px;
     margin-bottom: 10px;
-    margin-left: 31px;
     text-align: center;
 }
+.fa-check{
+    float: right;
+}
 
-.slist {
+. {
     margin-top: 12px;
     height: 24px;
     width: 240px;
@@ -38,13 +43,12 @@ h1 {
 button {
     height: 25px;
     width: 91px;
+    margin-top: 20px;
     background: none;
     font-size: 18px;
     border: 2px solid;
     border-radius: 5px;
     padding: 0 0 4px;
-    text-align: center;
-    margin-left: 6px;
     background-color: grey;
     opacity: .7;
 }
@@ -53,7 +57,7 @@ button {
     text-align: center;
 }
 
-.slist li {
+.list li {
     font-size: 24px;
     font-weight: 700;
     cursor: pointer;
@@ -63,22 +67,23 @@ button {
     text-align: center;
 }
 
-span {
-    margin: 0;
-}
-
 .Checked {
     height: 18px;
 }
 
-.delete {
+#delete {
     cursor: pointer;
     float: right;
     margin-top: 3px;
     width: 20px;
+    margin-right: 4px;
    
 }
 
 .show {
     display: inline;
+}
+
+.item{
+    margin-top: 5px;
 }
