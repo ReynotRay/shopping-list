@@ -1,21 +1,3 @@
-       
-//     $('.list').mouseenter(function() {
-//         console.log('hover');
-//   $('#delete').fadeIn(100);
-//   });
-//     $('.item').mouseleave(function() {
-//         console.log('exit hover');
-//   $('#delete').fadeOut(100);
-// });
-
-
-     $('.list').mouseenter(function() {
-        console.log('enter list correct');
-        $('#delete').children().show();
-
-        });         
-
-
          //var ShoppingListApp = function() {};
         $('.list-input').keyup(function(event) {
             if (event.keyCode == 13) {
@@ -52,17 +34,11 @@
                 $('.list').append('<li class="item">' + $('.list-input').val()+'<i id="done" class="fa fa-check" aria-hidden="true"></i>' +'<i id="delete" class="fa fa-trash-o" aria-hidden="true"></i>');
                 resetValue();
                 }
-            }
+            
             // var app = new ShoppingListApp();
             //ShoppingListApp();
 
-
-
-    $('.item').mouseenter(function() {
-        console.log('hover');
-  // $('#delete').fadeIn(100);
-  // $('#delete').fadeOut(500);
-});
+}
 
 
 
