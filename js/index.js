@@ -1,14 +1,4 @@
        
-//     $('.list').mouseenter(function() {
-//         console.log('hover');
-//   $('#delete').fadeIn(100);
-//   });
-//     $('.item').mouseleave(function() {
-//         console.log('exit hover');
-//   $('#delete').fadeOut(100);
-// });
-
-
      $('.list').mouseenter(function() {
         console.log('enter list correct');
         $('#delete').children().show();
