@@ -1,14 +1,9 @@
-<<<<<<< HEAD
        
      $('.list').mouseenter(function() {
         console.log('enter list correct');
         $('#delete').children().show();
 
         });         
-
-
-=======
->>>>>>> edef764a8fe5226d0c882fabf9dafca22236a138
          //var ShoppingListApp = function() {};
         $('.list-input').keyup(function(event) {
             if (event.keyCode == 13) {

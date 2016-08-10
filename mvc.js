@@ -21,12 +21,7 @@ View.prototype.append = function(data) {
   }
 });
     $('.add').click(function() {
-  if ($('.list-input').val().length) {
-    $('ul').append('<li class="item">' + $('.list-input').val() + '<i id="done" class="fa fa-check" aria-hidden="true"></i>' + '<i id="delete" class="fa fa-trash-o" aria-hidden="true"></i>' +'</li>');
-    resetValue();
-  } else {
-    alert('Please Type An Item');
-  }
+      checkValue();
 });
     $('.list').on('click', 'li', function() {
   $(this).css('text-decoration', 'line-through');
@@ -35,9 +30,6 @@ $('.list').on('click', '#delete', function() {
   $(this).parent().remove();
 });
 };
-function resetValue() {
-  $('.list-input').val("");
-}
 
 function checkValue() {
   if ($('.list-input').val() === "") {
@@ -46,6 +38,9 @@ function checkValue() {
     $('ul').append('<li class="item">' + $('.list-input').val() + '<i id="done" class="fa fa-check" aria-hidden="true"></i>' +'<i id="delete" class="fa fa-trash-o" aria-hidden="true"></i>');
     resetValue();
   }
+}
+function resetValue() {
+  $('.list-input').val("");
 }
 
 View.prototype.value = function() {
@@ -57,16 +52,16 @@ function Controller(view, model) {
     this.model = model;
 }
 
-Controller.prototype.onButtonClick = function() {
-    var self = this;
-    $('.add').click(function() {
-        self.model.addData(self.view.value());
-        self.view.append(self.model.listItems);
-    });
-};
+// Controller.prototype.onButtonClick = function() {
+//     var self = this;
+//     $('.add').click(function() {
+//         self.model.addData(self.view.value());
+//         self.view.append(self.model.listItems);
+//     });
+// };
 
 var model = new Model();
 var view = new View();
 var controller = new Controller(view, model);
-controller.onButtonClick();
+// controller.onButtonClick();
 view.append();
